@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="car1" class="exDI_IOC.Car" />
+	<bean name="car2" class="exDI_IOC.Car" />
+	<bean name="plane" class="exDI_IOC.Plane" />
+	
+	<bean name="driver1" class="exDI_IOC.Driver">
+		<property name="moveable" ref="car1" />
+	</bean>
+
+	<bean name="driver2" class="exDI_IOC.Driver">
+		<property name="moveable" ref="car2" />
+	</bean>
+		
+</beans>
